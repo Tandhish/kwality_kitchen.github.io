@@ -1,6 +1,13 @@
 # Kwality Kitchen
 Repository to contain the creations for kwality kitchen
 
+#### Available Branches:
+
+* main (dont push to this)
+* front-end
+* back-end
+* database
+
 
 ## Instructions
 
@@ -21,7 +28,8 @@ Repository to contain the creations for kwality kitchen
     * `git commit -m "<message>"`     
     * `git push origin <branchname>`
     
-    Note: If you want to directly push to branch without changing your local branch, you can simply do `git push origin <localbranch>:<remotebranch>`
+    Note: If you want to directly push to branch without changing your local branch, you can simply do <br>
+    `git push origin <localbranch>:<remotebranch>`
     
     ### Example:
     
