@@ -1,6 +1,7 @@
 package com.techorzo.kwality.kitchen.model;
 
-import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Iterator;
 
 public class Customer implements Iterable<String> {
@@ -19,15 +20,15 @@ public class Customer implements Iterable<String> {
     public String getAddress() { return _address; }
 
 
-    public Customer(String uuid, String username,
+    public Customer(@JsonProperty("") String uuid, String username,
                     String date, String email,
-                    String contact, String addr) {
+                    String contact, String address) {
         _uuid = uuid;
         _user_name = username;
         _sign_up_date = date;
         _email = email;
         _phone_contact = contact;
-        _address = addr;
+        _address = address;
     }
 
     public String get(int i) {

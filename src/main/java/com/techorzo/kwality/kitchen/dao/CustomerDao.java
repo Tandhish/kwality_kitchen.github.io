@@ -13,7 +13,7 @@ public interface CustomerDao {
 
     Optional<Customer> getCustomerByID(String uuid);
 
-    Optional<List<Customer>> getCustomerByName(String name);
+    Optional<Customer> getCustomerByName(String name);
 
     List<Customer> getAllCustomers();
 

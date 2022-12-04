@@ -3,7 +3,6 @@ package com.techorzo.kwality.kitchen.dao;
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
 import com.techorzo.kwality.kitchen.model.Customer;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -58,6 +57,7 @@ public class CustomerImpl implements CustomerDao{
                 List<List<String>> r = handler.executeQuery(query, uuid);
                 for(List<String> strings : r) {
                     res.add(makeCustomer(strings));
+                    break;
                 }
 
             } catch (Exception e) {
@@ -69,13 +69,40 @@ public class CustomerImpl implements CustomerDao{
     }
 
     @Override
-    public Optional<List<Customer>> getCustomerByName(String name) {
+    public Optional<Customer> getCustomerByName(String name) {
         List<Customer> res = new ArrayList<>();
-        return Optional.empty();
+
+        if(handler.isConnectedDB()) {
+            try {
+                String query = "SELECT * FROM customer WHERE UserName=?;";
+                List<List<String>> r = handler.executeQuery(query, name);
+                for(List<String> strings : r) {
+                    res.add(makeCustomer(strings));
+                    break;
+                }
+            } catch (Exception e) {
+                System.out.println("Error ::" + e.getMessage());
+            }
+        }
+        return res.stream()
+                .findFirst();
     }
 
     @Override
     public List<Customer> getAllCustomers() {
-        return null;
-    }
+        List<Customer> res = new ArrayList<>();
+
+        if(handler.isConnectedDB()) {
+            try {
+                String query = "SELECT * FROM customer;";
+                List<List<String>> r = handler.executeQuery(query);
+                for(List<String> strings : r) {
+                    res.add(makeCustomer(strings));
+                }
+            } catch (Exception e) {
+                System.out.println("Error :: " + e.getMessage());
+            }
+        }
+        return res;
+     }
 }
