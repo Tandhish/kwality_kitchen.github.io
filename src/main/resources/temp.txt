@@ -1,0 +1,55 @@
+create database Main_Database;
+use Main_Database;
+
+create table Customer (Customer_ID varchar(20) not null, Customer_Name varchar(100) not null, Customer_Email varchar(50), Customer_Phone char(10) not null, Customer_Address text(65000), constraint pk_Customer, primary key(Customer_ID));
+create table Delivery_Employee (Employee_ID varchar(20) not null, Employee_Name varchar(100) not null, Employee_Phone char(10) not null, Employee_Address text(65000), constraint pk_Delivery_Employee primary key(Employee_ID));
+create table Product (Product_ID varchar(50) not null, Product_Name varchar(100) not null, Product_Description text(65000), Product_Amount float, constraint pk_Product primary key(Product_ID));
+create table Company_Transaction (Transaction_ID varchar(50) not null, Transaction_Date date not null, Transaction_Status varchar(10), Transaction_Amount float, constraint pk_Company_Transaction primary key (Transaction_ID));
+create table Delivery_Details (Delivery_ID varchar(50) not null, Delivery_Date date not null, Product_ID varchar(50) not null, Scheduled_Time time not null, Employee_ID varchar(20), constraint pk_Delivery_Details primary key(Delivery_ID), constraint fk_product foreign key(Product_ID) references Product(Product_ID), constraint fk_employee foreign key(Employee_ID) references Delivery_Employee(Employee_ID));
+create table Subscription_Order (Product_ID varchar(50) not null, Transaction_ID varchar(50) not null, Subscription_Order_Date date, Customer_ID varchar(20), Subscription_Order_Status varchar(10), constraint fk_Subscription_Order_Status foreign key(Product_ID) references Product(Product_ID), constraint fk_Transaction_ID foreign key(Transaction_ID) references Company_Transaction(Transaction_ID), constraint fk_customer_ID foreign key(Customer_ID) references Customer(Customer_ID));
+
+drop database Main_Database;
+
+show tables;
+
+insert into customer values ("C001", "Vinit", "ivinitr@gmail.com", "9820330370", "A 303 Maruti apartment JN road Mulund west Mumbai 400080");
+insert into delivery_employee values ("E001", "Harish", "9922334455", "Labdar chole puri ka rasta");
+insert into product values ("P001", "Garnier", "Hair straightener", "530.00");
+insert into company_transaction values ("T001", "2022/12/05", "Success", "15000.00");
+insert into delivery_details values ("D001", "2022/12/05", "P001", "06:00:00", "E001");
+insert into subscription_order values ("P001", "T001", "2022/12/05", "C001", "Success");
+
+select * from customer;
+select * from delivery_employee;
+select * from product;
+select * from company_transaction;
+select * from delivery_details;
+select * from subscription_order;
+
+create database Credential_Database;
+use Credential_Database;
+
+create table customer_credentials (Customer_ID varchar(20) not null, Customer_User_Name varchar(50) not null, Customer_Password varchar(50) not null, constraint pk_Customer primary key(Customer_ID));
+create table employee_credentials (Employee_ID varchar(20) not null, Employee_User_Name varchar(50) not null, Employee_Password varchar(50) not null, Employee_Type varchar(50), constraint pk_Employee primary key(Employee_ID));
+
+show tables;
+
+insert into customer_credentials values ("C001", "Vinit_001", "Pass123");
+insert into employee_credentials values ("EOO1", "Ronit_002", "Pass1233", "Kitchen");
+
+select * from customer_credentials;
+select * from employee_credentials;
+
+create database Order_Database;
+use Order_Database;
+
+create table Daily_Order (Daily_Order_ID varchar(20) not null, Order_Date date, Scheduled_Time time, Order_status varchar(20), Product_ID varchar(20), constraint pk_Daily_Order primary key(Daily_Order_ID));
+create table Subscription_Order (Product_ID varchar(20) not null, Daily_Order_ID varchar(20) not null, constraint pk_Subscription_Order primary key(Product_ID), constraint fk_Subscription_Order foreign key(Daily_Order_ID) references Daily_Order(Daily_Order_ID));
+
+insert into Daily_Order values ("DO1", "2022/11/22", "11:00", "Success", "P001");
+insert into Subscription_Order values ("P001", "DO1");
+
+select * from Daily_Order;
+select * from Subscription_Order;
+
+show databases;

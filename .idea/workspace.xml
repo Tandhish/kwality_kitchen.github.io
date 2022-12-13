@@ -4,20 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1da6d32-7589-4300-8669-6c117ebe8f99" name="Changes" comment="&gt; Added SQL Handler&#10;&gt; Update CUstomer Dao and Working on Implementation">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Main2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/XmlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/strings.xml" afterDir="false" />
+    <list default="true" id="a1da6d32-7589-4300-8669-6c117ebe8f99" name="Changes" comment="&gt; Added XML Parser to get string names from strings.xml&#10;   &gt; This is to ensure that all string values stay in one file and can be modified easily.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/EmployeeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/credential/CustomerCredential.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/credential/EmployeeCredential.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/main/CompanyTransaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/main/DeliveryDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/main/DeliveryEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/main/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/main/SubscriptionOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/order/DailyOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/order/SubscriptionOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/setup/BackUpHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/setup/InitSetup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/databases/Credential_Database_test.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/databases/Main_Database_test.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/databases/Order_Database_test.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/temp.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/CustomerDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/CustomerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/CustomerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/CustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/CustomerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/CustomerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/CustomerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/main/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/databases/test.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Main2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test.db" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +42,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -43,6 +59,13 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,6 +91,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\kwality_kitchen\src\main\resources\databases" />
       <recent name="D:\Projects\kwality_kitchen\BackEnd\src" />
     </key>
   </component>
@@ -149,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669370319758</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="&gt; Added XML Parser to get string names from strings.xml&#10;   &gt; This is to ensure that all string values stay in one file and can be modified easily.">
+      <created>1670156943574</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670156943574</updated>
+    </task>
+    <task id="LOCAL-00007" summary="&gt; Added XML Parser to get string names from strings.xml&#10;   &gt; This is to ensure that all string values stay in one file and can be modified easily.">
+      <created>1670157012074</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670157012074</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,7 +231,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test Commit" />
     <MESSAGE value="&gt; Added SQL Handler&#10;&gt; Update CUstomer Dao and Working on Implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="&gt; Added SQL Handler&#10;&gt; Update CUstomer Dao and Working on Implementation" />
+    <MESSAGE value="&gt; Added XML Parser to get string names from strings.xml&#10;   &gt; This is to ensure that all string values stay in one file and can be modified easily." />
+    <option name="LAST_COMMIT_MESSAGE" value="&gt; Added XML Parser to get string names from strings.xml&#10;   &gt; This is to ensure that all string values stay in one file and can be modified easily." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

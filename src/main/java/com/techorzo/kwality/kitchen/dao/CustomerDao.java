@@ -1,6 +1,6 @@
 package com.techorzo.kwality.kitchen.dao;
 
-import com.techorzo.kwality.kitchen.model.Customer;
+import com.techorzo.kwality.kitchen.model.main.Customer;
 import com.techorzo.kwality.kitchen.uuid.CustomUUID;
 
 import java.util.List;

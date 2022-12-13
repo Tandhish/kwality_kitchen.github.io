@@ -1,7 +1,7 @@
 package com.techorzo.kwality.kitchen.dao;
 
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
-import com.techorzo.kwality.kitchen.model.Customer;
+import com.techorzo.kwality.kitchen.model.main.Customer;
 
 import java.util.ArrayList;
 import java.util.List;

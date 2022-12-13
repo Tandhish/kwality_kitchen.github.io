@@ -1,4 +1,4 @@
-package com.techorzo.kwality.kitchen.model;
+package com.techorzo.kwality.kitchen.model.main;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -64,6 +64,5 @@ public class Customer implements Iterable<String> {
         public void remove() {
             throw new UnsupportedOperationException("remove() not implemented for : " + this);
         }
-
     }
 }

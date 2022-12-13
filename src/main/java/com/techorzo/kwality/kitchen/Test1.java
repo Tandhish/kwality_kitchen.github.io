@@ -3,7 +3,7 @@ package com.techorzo.kwality.kitchen;
 import com.techorzo.kwality.kitchen.dao.CustomerDao;
 import com.techorzo.kwality.kitchen.dao.CustomerImpl;
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
-import com.techorzo.kwality.kitchen.model.Customer;
+import com.techorzo.kwality.kitchen.model.main.Customer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
