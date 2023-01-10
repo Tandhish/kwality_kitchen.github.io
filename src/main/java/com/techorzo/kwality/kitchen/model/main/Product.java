@@ -1,5 +1,7 @@
 package com.techorzo.kwality.kitchen.model.main;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.math.BigDecimal;
 import java.util.Currency;
 
@@ -14,8 +16,8 @@ public class Product {
     public String getProductDescription() { return _product_description; }
     public String getProductName() { return _product_name; }
 
-    public Product(String product_id, BigDecimal product_amount,
-                   String product_description, String product_name) {
+    public Product(@JsonProperty("p_id") String product_id,@JsonProperty("p_amt") BigDecimal product_amount,
+                   @JsonProperty("desc") String product_description,@JsonProperty("p_name") String product_name) {
         _product_id = product_id;
         _product_amount = product_amount;
         _product_description = product_description;

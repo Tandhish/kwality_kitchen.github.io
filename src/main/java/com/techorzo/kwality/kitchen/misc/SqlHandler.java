@@ -20,6 +20,7 @@ public class SqlHandler {
         if(connection == null) {
             try {
                 connection = DriverManager.getConnection(url);
+                System.out.println(url);
 
             } catch (SQLException sqlException) {
                 System.out.println("Error :: " + sqlException.getMessage());
@@ -50,7 +51,7 @@ public class SqlHandler {
         return 0; // Disconnected and the reference was nullified
     }
 
-    public synchronized List<List<String>> executeQuery(String query, String ...values) {
+    public synchronized List<List<String>> executeQuery(String query, Object ...values) {
         List<List<String>> result = new ArrayList<>();
 
         try {
@@ -87,7 +88,7 @@ public class SqlHandler {
         return result;
     }
 
-    public synchronized int executeUpdate(String query, String ...values) {
+    public synchronized int executeUpdate(String query, Object ...values) {
         int rows_affected;
 
         try {
@@ -113,10 +114,10 @@ public class SqlHandler {
         return true;
     }
 
-    private PreparedStatement setValues(PreparedStatement preparedStatement, String[] values) throws SQLException{
+    private PreparedStatement setValues(PreparedStatement preparedStatement, Object[] values) throws SQLException{
         if(values != null) {
             for (int i = 0; i < values.length; i++) {
-                preparedStatement.setString(i + 1, values[i]);
+                preparedStatement.setString(i + 1, values[i].toString());
             }
         }
         return preparedStatement;

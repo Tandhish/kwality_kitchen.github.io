@@ -1,14 +1,17 @@
-package com.techorzo.kwality.kitchen.dao;
+package com.techorzo.kwality.kitchen.dao.main;
 
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
 import com.techorzo.kwality.kitchen.model.main.Customer;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+
+@Repository("SqlLite")
 public class CustomerImpl implements CustomerDao{
-    private SqlHandler handler;
+    private final SqlHandler handler;
 
     public CustomerImpl() {
         handler = SqlHandler.getInstance();
@@ -21,8 +24,8 @@ public class CustomerImpl implements CustomerDao{
 
         if(handler.isConnectedDB()) {
             try {
-                String query = "Insert into customer (UUID, UserName, Email, Contact, Address, SignUp) values (?, ?, ?, ?, ?, ?);";
-                res = handler.executeUpdate(query, customer.getUUID(), customer.getUserName(), customer.getEmail(), customer.getContact(), customer.getAddress(), customer.getSignUpDate().toString());
+                String query = "Insert into Customer (Customer_ID, Customer_Address, Customer_Email, Customer_Name, Customer_Phone) values (?, ?, ?, ?, ?);";
+                res = handler.executeUpdate(query, uuid, customer.getAddress(), customer.getEmail(), customer.getUserName(), customer.getContact());
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -37,7 +40,7 @@ public class CustomerImpl implements CustomerDao{
 
         if(handler.isConnectedDB()) {
             try {
-                String query = "DELETE FROM customer WHERE UUID=?";
+                String query = "DELETE FROM Customer WHERE Customer_ID=?";
                 res = handler.executeUpdate(query, uuid);
             } catch (Exception e) {
                 System.out.println("Error :: " + e.getMessage());
@@ -53,7 +56,7 @@ public class CustomerImpl implements CustomerDao{
 
         if(handler.isConnectedDB()) {
             try {
-                String query = "SELECT * FROM customer WHERE UUID=?;";
+                String query = "SELECT * FROM customer WHERE Customer_ID=?;";
                 List<List<String>> r = handler.executeQuery(query, uuid);
                 for(List<String> strings : r) {
                     res.add(makeCustomer(strings));
@@ -74,7 +77,7 @@ public class CustomerImpl implements CustomerDao{
 
         if(handler.isConnectedDB()) {
             try {
-                String query = "SELECT * FROM customer WHERE UserName=?;";
+                String query = "SELECT * FROM customer WHERE Customer_Name=?;";
                 List<List<String>> r = handler.executeQuery(query, name);
                 for(List<String> strings : r) {
                     res.add(makeCustomer(strings));
@@ -94,7 +97,7 @@ public class CustomerImpl implements CustomerDao{
 
         if(handler.isConnectedDB()) {
             try {
-                String query = "SELECT * FROM customer;";
+                String query = "SELECT * FROM Customer;";
                 List<List<String>> r = handler.executeQuery(query);
                 for(List<String> strings : r) {
                     res.add(makeCustomer(strings));

@@ -1,4 +1,4 @@
-package com.techorzo.kwality.kitchen.dao;
+package com.techorzo.kwality.kitchen.dao.main;
 
 import com.techorzo.kwality.kitchen.model.main.Customer;
 import com.techorzo.kwality.kitchen.uuid.CustomUUID;
@@ -24,6 +24,6 @@ public interface CustomerDao {
 
     default Customer makeCustomer(List<String> str) {
         /*  UUID, UserName, SignUp, Email, Contact, Address */
-        return new Customer(str.get(0), str.get(1), str.get(2), str.get(3), str.get(4), str.get(5));
+        return new Customer(str.get(0), str.get(1), str.get(2), str.get(3), str.get(4));
     }
 }

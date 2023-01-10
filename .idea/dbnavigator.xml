@@ -60,7 +60,12 @@ select * from delivery_employee;
 select * from product;
 select * from company_transaction;
 select * from delivery_details;
-select * from subscription_order;]]></console>
+select * from subscription_order;
+
+
+
+
+Select * From Customer;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

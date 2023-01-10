@@ -1,8 +1,9 @@
 package com.techorzo.kwality.kitchen;
 
-import com.techorzo.kwality.kitchen.dao.CustomerDao;
-import com.techorzo.kwality.kitchen.dao.CustomerImpl;
+import com.techorzo.kwality.kitchen.dao.main.CustomerDao;
+import com.techorzo.kwality.kitchen.dao.main.CustomerImpl;
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
+import com.techorzo.kwality.kitchen.misc.XmlParser;
 import com.techorzo.kwality.kitchen.model.main.Customer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -17,7 +18,7 @@ public class Test1 {
         SqlHandler handler = SqlHandler.getInstance();
 
         // jdbc:sqlite:D:\Projects\kwality_kitchen\src\main\resources\test.db
-        String url = "jdbc:sqlite:D://Projects/kwality_kitchen/src/main/resources/test.db";
+        String url = "jdbc:sqlite:D://Projects/kwality_kitchen/src/main/resources/databases/Main_Database_test.db";
         handler.connectDB(url);
 
 
