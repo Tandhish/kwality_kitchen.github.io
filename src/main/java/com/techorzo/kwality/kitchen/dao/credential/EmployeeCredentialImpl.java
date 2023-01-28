@@ -10,7 +10,7 @@ import java.util.Optional;
 public class EmployeeCredentialImpl implements EmployeeCredentialDao{
     private final SqlHandler handler;
 
-    public EmployeeCredentialImpl() { handler = SqlHandler.getInstance(); }
+    public EmployeeCredentialImpl() { handler = SqlHandler.getCredentialInstance(); }
 
     @Override
     public int insertEmployeeCredential(String employee_id, EmployeeCredential credential) {

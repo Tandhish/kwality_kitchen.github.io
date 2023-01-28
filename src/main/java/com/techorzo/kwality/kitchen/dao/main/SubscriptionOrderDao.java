@@ -17,7 +17,7 @@ public interface SubscriptionOrderDao {
     Optional<SubscriptionOrder> getSubscriptionOrderByDate(String date);
 
     default int insertSubscriptionOrder(SubscriptionOrder subscriptionOrder) {
-        return insertSubscriptionOrder(CustomUUID.getStringUUID(), subscriptionOrder);
+        return insertSubscriptionOrder(CustomUUID.getStringUUID(subscriptionOrder.getCustomerID()), subscriptionOrder);
     }
 
     default SubscriptionOrder makeSubscriptionOrder(List<String> str) {

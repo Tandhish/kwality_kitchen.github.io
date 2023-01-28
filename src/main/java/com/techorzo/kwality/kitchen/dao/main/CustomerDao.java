@@ -19,7 +19,7 @@ public interface CustomerDao {
 
 
     default int insertCustomer(Customer customer) {
-        return insertCustomer(CustomUUID.getStringUUID(), customer);
+        return insertCustomer(CustomUUID.getStringUUID(customer.getUserName()), customer);
     }
 
     default Customer makeCustomer(List<String> str) {

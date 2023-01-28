@@ -10,17 +10,22 @@ ToDO:
  > [Add More Here]
  */
 
-import java.util.ArrayList;
-import java.util.List;
+import org.apache.tomcat.util.net.openssl.ciphers.Encryption;
+
+import java.util.*;
 
 public class CustomUUID {
     private static List<String> _uid_list;
 
     public synchronized static String getStringUUID(String ...values) {
         StringBuilder builder = new StringBuilder();
+
         for(String s : values) {
             builder.append(s);
+            builder.append("-");
         }
+        builder.append(UUID.randomUUID());
+
         return builder.toString();
     }
 

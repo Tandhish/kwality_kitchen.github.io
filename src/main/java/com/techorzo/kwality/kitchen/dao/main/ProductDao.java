@@ -16,7 +16,7 @@ public interface ProductDao {
 
     Optional<Product> getProductByName(String name);
 
-    default int insertCustomer(Product product) { return insertProduct(CustomUUID.getStringUUID(), product); }
+    default int insertProduct(Product product) { return insertProduct(CustomUUID.getStringUUID(product.getProductName()), product); }
 
     default Product makeProduct(List<String> strings) {
         /* p_id, p_amt, p_des, p_name */

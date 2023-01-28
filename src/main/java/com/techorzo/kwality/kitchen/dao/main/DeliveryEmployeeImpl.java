@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Repository("SqlLite")
+@Repository("DeliveryEmployeeSqlLite")
 public class DeliveryEmployeeImpl implements DeliveryEmployeeDao{
     private final SqlHandler handler;
 
-    public DeliveryEmployeeImpl() { handler = SqlHandler.getInstance(); }
+    public DeliveryEmployeeImpl() { handler = SqlHandler.getMainInstance(); }
 
     @Override
     public int insertDeliveryEmployee(String employee_id, DeliveryEmployee deliveryEmployee) {

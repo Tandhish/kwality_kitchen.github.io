@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Repository("SqlLite")
+@Repository("CompanyTransactionSqlLite")
 public class CompanyTransactionImpl implements CompanyTransactionDao{
     private final SqlHandler handler;
 
-    public CompanyTransactionImpl() { handler = SqlHandler.getInstance(); }
+    public CompanyTransactionImpl() { handler = SqlHandler.getMainInstance(); }
 
     @Override
     public int insertTransaction(String t_id, CompanyTransaction transaction) {

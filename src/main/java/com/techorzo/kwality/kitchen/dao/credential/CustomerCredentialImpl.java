@@ -2,16 +2,18 @@ package com.techorzo.kwality.kitchen.dao.credential;
 
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
 import com.techorzo.kwality.kitchen.model.credential.CustomerCredential;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+@Repository("CustomerCredentialSqlLite")
 public class CustomerCredentialImpl implements CustomerCredentialDao {
     private final SqlHandler handler;
 
-    public CustomerCredentialImpl() { handler = SqlHandler.getInstance(); }
+    public CustomerCredentialImpl() { handler = SqlHandler.getCredentialInstance(); }
 
     @Override
     public int insertCustomerCredential(String cust_id, CustomerCredential credential) {

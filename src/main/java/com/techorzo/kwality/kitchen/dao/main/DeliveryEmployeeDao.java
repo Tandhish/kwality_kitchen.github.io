@@ -16,7 +16,7 @@ public interface DeliveryEmployeeDao {
     Optional<DeliveryEmployee> getDeliveryEmployeeByName(String name);
 
     default int insertDeliveryEmployee(DeliveryEmployee deliveryEmployee) {
-        return insertDeliveryEmployee(CustomUUID.getStringUUID(), deliveryEmployee);
+        return insertDeliveryEmployee(CustomUUID.getStringUUID(deliveryEmployee.getEmployeeName()), deliveryEmployee);
     }
 
     default DeliveryEmployee makeDeliveryEmployee(List<String> str) {

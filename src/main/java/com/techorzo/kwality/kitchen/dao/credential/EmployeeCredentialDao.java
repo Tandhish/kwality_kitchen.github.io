@@ -17,7 +17,7 @@ public interface EmployeeCredentialDao {
     Optional<EmployeeCredential> getEmployeeCredentialByName(String name);
 
     default int insertEmployeeCredential(EmployeeCredential credential) {
-        return insertEmployeeCredential(CustomUUID.getStringUUID(), credential);
+        return insertEmployeeCredential(CustomUUID.getStringUUID(credential.getEmployeeUserName()), credential);
     }
 
     default EmployeeCredential makeEmployeeCredential(List<String> str) {

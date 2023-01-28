@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Repository("SqlLite")
+@Repository("SubscriptionOrderSqlLite")
 public class SubscriptionOrderImpl implements SubscriptionOrderDao{
     private final SqlHandler handler;
 
-    public SubscriptionOrderImpl() { handler = SqlHandler.getInstance(); }
+    public SubscriptionOrderImpl() { handler = SqlHandler.getMainInstance(); }
 
     @Override
     public int insertSubscriptionOrder(String transaction_id, SubscriptionOrder subscriptionOrder) {

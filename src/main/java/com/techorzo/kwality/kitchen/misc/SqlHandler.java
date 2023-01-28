@@ -123,15 +123,38 @@ public class SqlHandler {
         return preparedStatement;
     }
 
-    private SqlHandler() {
-        //Does nothing for now
+    private SqlHandler() {}
+
+    private SqlHandler(int i) {
+
+        switch (i) {
+            case 0 :
+                connectDB(XmlParser.getStringByID("main_db"));
+                break;
+            case 1 :
+                connectDB(XmlParser.getStringByID("credential_db"));
+                break;
+            case 2 :
+                connectDB(XmlParser.getStringByID("order_db"));
+                break;
+        }
     }
 
-    public synchronized static SqlHandler getInstance() {
-        return _HOLDER._Instance;
+    public synchronized static SqlHandler getMainInstance() {
+        return _HOLDER._mainInstance;
+    }
+
+    public synchronized static SqlHandler getCredentialInstance() {
+        return _HOLDER._credentialInstance;
+    }
+
+    public synchronized static SqlHandler getOrderInstance() {
+        return _HOLDER._orderInstance;
     }
 
     private static final class _HOLDER {
-        private static final SqlHandler _Instance = new SqlHandler();
+        private static final SqlHandler _mainInstance = new SqlHandler(0);
+        private static final SqlHandler _credentialInstance = new SqlHandler(1);
+        private static final SqlHandler _orderInstance = new SqlHandler(2);
     }
 }

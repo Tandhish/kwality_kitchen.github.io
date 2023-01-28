@@ -16,7 +16,7 @@ import java.util.Objects;
 Note: Valid only for this project, do not import it to other projects without making significant changes
  */
 public class XmlParser {
-    public String getStringByID(String id) {
+    public synchronized static String getStringByID(String id) {
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
 

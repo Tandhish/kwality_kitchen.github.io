@@ -18,7 +18,7 @@ public interface DeliveryDetailsDao {
     Optional<DeliveryDetails> getDeliveryDetailsByDate(String delivery_date);
 
     default int insertDeliveryDetails(DeliveryDetails deliveryDetails) {
-        return insertDeliveryDetails(CustomUUID.getStringUUID(), deliveryDetails);
+        return insertDeliveryDetails(CustomUUID.getStringUUID(deliveryDetails.getEmployeeID()), deliveryDetails);
     }
 
     default DeliveryDetails makeDeliveryDetails(List<String> str) {

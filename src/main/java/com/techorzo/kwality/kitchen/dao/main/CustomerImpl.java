@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Repository("SqlLite")
+@Repository("CustomerSqlLite")
 public class CustomerImpl implements CustomerDao{
     private final SqlHandler handler;
 
     public CustomerImpl() {
-        handler = SqlHandler.getInstance();
+        handler = SqlHandler.getMainInstance();
     }
 
 

@@ -9,11 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Repository("SqlLite")
+@Repository("ProductSqlLite")
 public class ProductImpl implements ProductDao{
     private final SqlHandler handler;
 
-    public ProductImpl() { handler = SqlHandler.getInstance(); }
+    public ProductImpl() { handler = SqlHandler.getMainInstance(); }
 
     @Override
     public int insertProduct(String p_id, Product product) {

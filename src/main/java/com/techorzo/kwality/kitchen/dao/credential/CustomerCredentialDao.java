@@ -16,7 +16,7 @@ public interface CustomerCredentialDao {
     Optional<CustomerCredential> getCustomerCredentialByName(String name);
 
     default int insertCustomerCredential(CustomerCredential credential) {
-        return insertCustomerCredential(CustomUUID.getStringUUID(), credential);
+        return insertCustomerCredential(CustomUUID.getStringUUID(credential.getCustomerID()), credential);
     }
 
     default CustomerCredential makeCustomerCredential(List<String> str) {
