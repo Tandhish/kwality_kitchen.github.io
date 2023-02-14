@@ -4,6 +4,7 @@ $Message = Read-Host
 
 
 function  GIT_COMMIT() {
+    git branch front-end
     git checkout front-end
     git pull origin front-end
     git add *
