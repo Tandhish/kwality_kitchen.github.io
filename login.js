@@ -72,5 +72,3 @@ function generateToken(username) {
     // Perform a better login action here
     return username;
 }
-
-
