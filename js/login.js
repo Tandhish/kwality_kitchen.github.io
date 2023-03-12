@@ -1,17 +1,44 @@
-function submit() {
-    alert("aja aja mere raja");
+function loginUser() {
+    let email = document.forms["login_frm"]["login_email"].value;
+    let pass = document.forms["login_frm"]["login_pass"].value;
+
+    if(email == "" || pass == "") {
+        alert("Please enter password and email");
+        return
+    }
+
+
+    const creds = {
+        "id" : email,
+        "pass" : pass,
+        "name" : "<not-filled>"
+    }
+    
+    Login(creds);
 }
 
-// document.getElementsByClassName('drill_cursor')[0]
-//         .addEventListener('click', function (event) {
-//             // do something
-//         });
 
+
+
+function signupUser() {
+    let name = document.forms["signup-frm"]["sign_name"].value;
+    let email = document.forms["signup-frm"]["sign_email"].value;
+    let pass = document.forms["signup-frm"]["sign_pass"].value;
+
+    const creds = {
+        "id" : email,
+        "pass" : pass,
+        "name" : name
+    }
+
+    SignUp(creds);
+}
 
 async function Login(creds) {
-    let params = JSON.parse(creds) //Redundant
+    console.log(creds)
+    // let creds = JSON.parse(creds)
 
-    url = localStorage.getItem('website') + "api/v1/login/autenticate/user/token=" + generateToken(j.name);
+    url = localStorage.getItem('website') + "/api/v1/login/authenticate/user/token=" + generateToken(creds.id);
 
     const config = {
         method : 'POST',
@@ -19,17 +46,19 @@ async function Login(creds) {
             'Accept' : 'application/json',
             'Content-Type' : 'application/json',
         },
-        body : JSON.stringify(params)
+        body : JSON.stringify(creds)
     }
 
     const token = await fetch (url, config).then((res) => res.text());
+
+    console.log(token)
 
     if(token == 'N/A') {
         // Do Login failed action
     }
     else {
         localStorage.setItem("token", token);
-        // Perform further actions
+        window.open("/placeholders/post-login.html", "_self")
     }
 }
 
@@ -43,9 +72,8 @@ async function Login(creds) {
 */
 
 async function SignUp(creds) { //Params
-    let params = JSON.parse(creds); //Redundant
 
-    url = localStorage.getItem('website') + "api/v1/login/new/user/token={token}"
+    url = localStorage.getItem('website') + "/api/v1/login/new/user/token=" + generateToken(creds.id);
 
     const config = {
         method: 'POST',
@@ -53,10 +81,13 @@ async function SignUp(creds) { //Params
             'Accept' : 'application/json',
             'Content-Type' : 'application/json',
         },
-        body : JSON.stringify(params)
+        body : JSON.stringify(creds)
     }
 
     const token = await fetch (url, config).then((res) => res.text());
+
+    console.log(token);
+
 
     if(token == 'User Exists') {
         // Do user existing action

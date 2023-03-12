@@ -8,13 +8,9 @@
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="login.js" ></script>
-    <script type = "text/javascript"> 
-    import submit from login 
-      function myfunction() {   
-        submit();  
-               }  
-      </script>  
+    <script type="text/javascript" src="js/login.js">
+    </script>
+     
    </head>
 <body>
   <div class="container">
@@ -39,19 +35,19 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <form action="#">
+          <form action="#" id="login_frm">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input id="login_email" type="text" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input id="login_pass" type="password" placeholder="Enter your password" required>
               </div>
               <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
-                <input type="button" onclick="myfunction()" value="Display">
+                <input id="login_bu" type="button" onclick="loginUser()" value="Login">
               </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
@@ -59,22 +55,22 @@
       </div>
         <div class="signup-form">
           <div class="title">Signup</div>
-        <form action="#">
+        <form action="#" id="signup-frm">
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required>
+                <input id="sign_name" type="text" placeholder="Enter your name" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input id="sign_email" type="text" placeholder="Enter your email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" required>
+                <input id="sign_pass" type="password" placeholder="Enter your password" required>
               </div>
               <div class="button input-box">
-                <input type="submit" value="Sumbit" >
+                <input type="submit" onclick="signupUser()" value="Sign Up" >
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>
