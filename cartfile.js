@@ -89,6 +89,358 @@ const data= [
         delievery : 'In 3 - 4 days',
         itemInCart: false
     },
+        {
+        id : 10,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 11,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 12,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 13,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 14,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 15,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 16,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 17,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 18,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 19,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 20,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 21,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 22,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 23,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 24,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 25,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 26,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 27,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 28,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 29,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 30,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 31,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 32,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 33,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 34,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 35,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 36,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 37,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 38,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 39,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 40,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 41,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 42,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 43,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 44,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 45,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 46,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 47,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+    {
+        id : 48,
+        img : '/images/',
+        name : '',
+        price : 100,
+        save : 10,
+        delievery : 'In 3 - 4 days',
+        itemInCart: false
+    },
+
 ];
 
 let cartList=[]; //array to store cart lists
