@@ -22,7 +22,7 @@ public class CompanyTransactionImpl implements CompanyTransactionDao{
         if(handler.isConnectedDB()) {
             try {
                 String query = "Insert into Company_Transaction (Transaction_ID, Transaction_Amount, Transaction_Date, Transaction_Status) values (?,?,?,?);";
-                res = handler.executeUpdate(query, t_id, transaction.getTransactionAmount(), transaction.getTransactionDate(), transaction.getTransactionDate());
+                res = handler.executeUpdate(query, t_id, transaction.getTransactionAmount(), transaction.getTransactionDate(), transaction.getTransactionStatus());
             } catch (Exception e) {
                 e.printStackTrace();
             }

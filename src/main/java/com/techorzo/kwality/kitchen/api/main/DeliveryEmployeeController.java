@@ -1,10 +1,12 @@
 package com.techorzo.kwality.kitchen.api.main;
 
-import com.techorzo.kwality.kitchen.dao.main.DeliveryEmployeeDao;
+import com.techorzo.kwality.kitchen.misc.Authorize;
 import com.techorzo.kwality.kitchen.model.main.DeliveryEmployee;
 import com.techorzo.kwality.kitchen.service.main.DeliveryEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/api/v1/delivery/employee")
@@ -16,17 +18,36 @@ public class DeliveryEmployeeController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping(path = "/add")
-    public int addDeliveryEmployee(DeliveryEmployee employee) {
+    @GetMapping(path = "/token={token}/add")
+    public int addDeliveryEmployee(@RequestBody DeliveryEmployee employee,@PathVariable("token") String token) {
+
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return -1;
+        }
         return employeeService.insertDeliveryEmployee(employee);
     }
 
-    public DeliveryEmployee getEmployeeById(String id) {
+    @GetMapping(path = "/token={token}/get/id={id}")
+    public DeliveryEmployee getEmployeeById(@PathVariable("id") String id,@PathVariable("token") String token) {
+
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
+
         return employeeService.getDeliveryEmployeeById(id)
                 .orElse(null);
     }
 
-    public DeliveryEmployee getEmployeeByName(String name) {
+    @GetMapping(path = "/token={token}/get/name={name}")
+    public DeliveryEmployee getEmployeeByName(@PathVariable("name") String name,@PathVariable("token") String token) {
+
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
+
         return employeeService.getDeliveryEmployeeByName(name)
                 .orElse(null);
     }

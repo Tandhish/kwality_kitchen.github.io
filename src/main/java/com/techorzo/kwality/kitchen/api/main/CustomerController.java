@@ -1,5 +1,6 @@
 package com.techorzo.kwality.kitchen.api.main;
 
+import com.techorzo.kwality.kitchen.misc.Authorize;
 import com.techorzo.kwality.kitchen.model.main.Customer;
 import com.techorzo.kwality.kitchen.service.main.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,20 +22,32 @@ public class CustomerController {
         customerService.addCustomer(customer);
     }
 
-    @PostMapping(path = "/add")
-    public void addCustomers(@RequestBody List<Customer> customers) {
+    @PostMapping(path = "/token={token}/add")
+    public void addCustomers(@RequestBody List<Customer> customers,@PathVariable("token") String token) {
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return;
+        }
         for(Customer c : customers) {
             customerService.addCustomer(c);
         }
     }
 
-    @GetMapping(path = "/get/all")
-    public List<Customer> getAllCustomers() {
+    @GetMapping(path = "/token={token}/get/all")
+    public List<Customer> getAllCustomers(@PathVariable("token") String token) {
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
         return customerService.getAllCustomers();
     }
 
-    @GetMapping(path = "/get/id={id}")
-    public Customer getCustomerById(@PathVariable("id") String uuid) {
+    @GetMapping(path = "/token={token}/get/id={id}")
+    public Customer getCustomerById(@PathVariable("id") String uuid,@PathVariable("token") String token) {
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
         return customerService.getCustomerById(uuid)
                 .orElse(null);
     }

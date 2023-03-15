@@ -1,6 +1,5 @@
 package com.techorzo.kwality.kitchen.api.credential;
 
-import com.techorzo.kwality.kitchen.dao.credential.CustomerCredentialDao;
 import com.techorzo.kwality.kitchen.model.credential.CustomerCredential;
 import com.techorzo.kwality.kitchen.service.credential.CustomerCredentialService;
 import org.springframework.beans.factory.annotation.Autowired;

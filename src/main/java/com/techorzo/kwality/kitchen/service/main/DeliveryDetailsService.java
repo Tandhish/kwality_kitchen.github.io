@@ -1,7 +1,6 @@
 package com.techorzo.kwality.kitchen.service.main;
 
 import com.techorzo.kwality.kitchen.dao.main.DeliveryDetailsDao;
-import com.techorzo.kwality.kitchen.dao.main.DeliveryEmployeeDao;
 import com.techorzo.kwality.kitchen.model.main.DeliveryDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

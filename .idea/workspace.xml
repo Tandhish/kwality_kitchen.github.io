@@ -4,70 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a1da6d32-7589-4300-8669-6c117ebe8f99" name="Changes" comment="&gt; Added access objects&#10;&gt; Added Implementations&#10;&gt; Added some Spring tags/annotations">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/credential/CustomerCredentialController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/CompanyTransactionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/CustomerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/DeliveryDetailsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/DeliveryEmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/SubscriptionOrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/Authorize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/credential/CustomerCredentialService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/CompanyTransactionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/CustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/DeliveryDetailsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/DeliveryEmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/ProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/SubscriptionOrderService.java" afterDir="false" />
+    <list default="true" id="a1da6d32-7589-4300-8669-6c117ebe8f99" name="Changes" comment="Added some stuff">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/ApplicationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/Test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/CustomerCredentialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/CustomerCredentialDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/credential/CustomerCredentialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/credential/CustomerCredentialController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/CompanyTransactionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/CompanyTransactionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/DeliveryDetailsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/DeliveryDetailsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/DeliveryEmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/DeliveryEmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/api/main/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/CustomerCredentialImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/CustomerCredentialImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/EmployeeCredentialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/EmployeeCredentialDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/EmployeeCredentialImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/credential/EmployeeCredentialImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CustomerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/CustomerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryDetailsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryDetailsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryEmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryEmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryEmployeeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/DeliveryEmployeeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/ProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/ProductDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/ProductImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/ProductImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/SubscriptionOrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/SubscriptionOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/SubscriptionOrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/dao/main/SubscriptionOrderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/SqlHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/SqlHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/XmlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/credential/CustomerCredential.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/model/credential/CustomerCredential.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/CustomerService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/uuid/CustomUUID.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/uuid/CustomUUID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/databases/Credential_Database_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/databases/Credential_Database_test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/databases/Main_Database_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/databases/Main_Database_test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/Authorize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/misc/Authorize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/DeliveryDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/DeliveryDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/SubscriptionOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/techorzo/kwality/kitchen/service/main/SubscriptionOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Test2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/Test2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CustomerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CustomerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CustomerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/SqlHandler$_HOLDER.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/SqlHandler$_HOLDER.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/SqlHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/SqlHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/XmlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/XmlParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/CompanyTransaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/CompanyTransaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/Customer$MyIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/Customer$MyIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/DeliveryDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/DeliveryDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/DeliveryEmployee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/DeliveryEmployee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/SubscriptionOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/model/main/SubscriptionOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/CustomerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/uuid/CustomUUID$_HOLDER.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/uuid/CustomUUID$_HOLDER.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/uuid/CustomUUID.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/uuid/CustomUUID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/databases/Main_Database_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/databases/Main_Database_test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/credential/CustomerCredentialController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/credential/CustomerCredentialController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/CompanyTransactionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/CompanyTransactionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/DeliveryDetailsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/DeliveryDetailsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/DeliveryEmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/DeliveryEmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/api/main/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/credential/CustomerCredentialImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/credential/CustomerCredentialImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/dao/main/CompanyTransactionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/Authorize$HOLDER.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/Authorize$HOLDER.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/Authorize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/misc/Authorize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/main/DeliveryDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/main/DeliveryDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/main/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/main/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/main/SubscriptionOrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/techorzo/kwality/kitchen/service/main/SubscriptionOrderService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673356563480</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added some stuff">
+      <created>1674921351732</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674921351732</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,7 +279,8 @@
     <MESSAGE value="&gt; Added XML Parser to get string names from strings.xml&#10;   &gt; This is to ensure that all string values stay in one file and can be modified easily." />
     <MESSAGE value="&gt; Updates test databases&#10;&gt; Added Models for all tables" />
     <MESSAGE value="&gt; Added access objects&#10;&gt; Added Implementations&#10;&gt; Added some Spring tags/annotations" />
-    <option name="LAST_COMMIT_MESSAGE" value="&gt; Added access objects&#10;&gt; Added Implementations&#10;&gt; Added some Spring tags/annotations" />
+    <MESSAGE value="Added some stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

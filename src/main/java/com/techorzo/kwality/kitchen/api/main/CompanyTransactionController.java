@@ -1,5 +1,6 @@
 package com.techorzo.kwality.kitchen.api.main;
 
+import com.techorzo.kwality.kitchen.misc.Authorize;
 import com.techorzo.kwality.kitchen.model.main.CompanyTransaction;
 import com.techorzo.kwality.kitchen.service.main.CompanyTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +16,33 @@ public class CompanyTransactionController {
         this.transactionService = transactionService;
     }
 
-    @PostMapping(path = "/add")
-    public int addTransaction(@RequestBody CompanyTransaction transaction) {
+    @PostMapping(path = "/token={token}/add")
+    public int addTransaction(@RequestBody CompanyTransaction transaction, @PathVariable("token") String token) {
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return -1;
+        }
             return transactionService.insertTransaction(transaction);
     }
 
-    @GetMapping(path = "/get/id={id}")
-    public CompanyTransaction getTransactionById(String t_id) {
+    @GetMapping(path = "/token={token}/get/id={id}")
+    public CompanyTransaction getTransactionById(@PathVariable("id") String t_id, @PathVariable("token") String token) {
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
+
         return transactionService.getTransactionById(t_id)
                 .orElse(null);
     }
 
-    @GetMapping(path = "/get/name={date}")
-    public CompanyTransaction getTransactionByDate(String date) {
+    @GetMapping(path = "/token={token}/get/date={date}")
+    public CompanyTransaction getTransactionByDate(@PathVariable("date") String date, @PathVariable("token") String token) {
+
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
         return transactionService.getTransactionByDate(date)
                 .orElse(null);
     }

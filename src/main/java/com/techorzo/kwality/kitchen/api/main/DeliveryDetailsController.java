@@ -1,5 +1,6 @@
 package com.techorzo.kwality.kitchen.api.main;
 
+import com.techorzo.kwality.kitchen.misc.Authorize;
 import com.techorzo.kwality.kitchen.model.main.DeliveryDetails;
 import com.techorzo.kwality.kitchen.service.main.DeliveryDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +16,35 @@ public class DeliveryDetailsController {
         this.detailsService = detailsService;
     }
 
-    @PostMapping(path = "/add")
-    public int addDeliveryDetails(@RequestBody DeliveryDetails details) {
+    @PostMapping(path = "/token={token}/add")
+    public int addDeliveryDetails(@RequestBody DeliveryDetails details,@PathVariable("token") String token) {
+
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return -1;
+        }
         return detailsService.insertDetails(details);
     }
 
-    @GetMapping(path = "/get/id={id}")
-    public DeliveryDetails getDetailsById(@PathVariable("id") String d_id) {
+    @GetMapping(path = "/token={token}/get/id={id}")
+    public DeliveryDetails getDetailsById(@PathVariable("id") String d_id,@PathVariable("token") String token) {
+
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
+
         return detailsService.getDetailsById(d_id)
                 .orElse(null);
     }
 
-    @GetMapping(path = "/get/date={date}")
-    public DeliveryDetails getDetailsByDate(@PathVariable("date") String date) {
+    @GetMapping(path = "/token={token}/get/date={date}")
+    public DeliveryDetails getDetailsByDate(@PathVariable("date") String date,@PathVariable("token") String token) {
+        Authorize authorize = Authorize.getInstance();
+        if(!authorize.isAuthorized(token)) {
+            return null;
+        }
+
         return detailsService.getDetailsByDate(date)
                 .orElse(null);
     }

@@ -3,7 +3,6 @@ package com.techorzo.kwality.kitchen.dao.credential;
 import com.techorzo.kwality.kitchen.misc.SqlHandler;
 import com.techorzo.kwality.kitchen.model.credential.CustomerCredential;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;

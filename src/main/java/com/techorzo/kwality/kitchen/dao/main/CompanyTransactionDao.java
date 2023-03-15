@@ -21,6 +21,7 @@ public interface CompanyTransactionDao {
     default int insertTransaction(CompanyTransaction transaction) { return insertTransaction(CustomUUID.getStringUUID(transaction.getTransactionAmount().toString(), transaction.getTransactionDate()), transaction); }
 
     default CompanyTransaction makeTransaction(List<String> str) {
+        System.out.println(str.get(1));
         return new CompanyTransaction(str.get(0), new BigDecimal(str.get(1)), str.get(2), OrderStatus.valueOf(str.get(3)));
     }
 }
