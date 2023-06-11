@@ -3,7 +3,6 @@ package com.techorzo.kwality.kitchen.model.main;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
-import java.util.Currency;
 
 public class Product {
     private final String _product_id;

@@ -1,6 +1,5 @@
 package com.techorzo.kwality.kitchen.api.main;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.techorzo.kwality.kitchen.misc.Authorize;
 import com.techorzo.kwality.kitchen.model.main.Product;
 import com.techorzo.kwality.kitchen.service.main.ProductService;

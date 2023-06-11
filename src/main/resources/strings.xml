@@ -1,7 +1,7 @@
 <string>
     <name id="test">Test Element</name>
     <name id="c_id">c_id</name>
-    <name id="main_db">jdbc:sqlite:D://Projects/kwality_kitchen/src/main/resources/databases/Main_Database_test.db</name>
-    <name id="credential_db">jdbc:sqlite:D://Projects/kwality_kitchen/src/main/resources/databases/Credential_Database_test.db</name>
-    <name id="order_db">jdbc:sqlite:D:/Projects/kwality_kitchen/src/main/resources/databases/Order_Database_test.db</name>
+    <name id="main_db">jdbc:sqlite:D:\Projects\Techorzo\kwality_kitchen\src\main\resources\databases\Main_Database_test.db</name>
+    <name id="credential_db">jdbc:sqlite:D:\Projects\Techorzo\kwality_kitchen\src\main\resources\databases\Credential_Database_test.db</name>
+    <name id="order_db">jdbc:sqlite:D:\Projects\Techorzo\kwality_kitchen\src\main\resources\databases\Order_Database_test.db</name>
 </string>

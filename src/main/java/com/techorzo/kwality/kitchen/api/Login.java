@@ -23,7 +23,7 @@ public class Login {
           if(service.getCredentialById(credential.getCustomerID()).isEmpty()) {
                return "N/A";
           }
-
+          System.out.println("Token :: " + credential.getCustomerID() + token);
           return authorize.newAuthorize(credential.getCustomerID() + token);
      }
 
@@ -35,4 +35,5 @@ public class Login {
           service.insertCredential(credential);
           return authorize.newAuthorize(credential.getCustomerID() + token);
      }
+
 }
